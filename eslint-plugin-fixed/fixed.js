@@ -1,18 +1,29 @@
-'use strict'
+"use strict";
 
 module.exports = {
+  rules: {
+    checkImports: {
       meta: {
         type: "problem",
-        // fixable: "code"
-        docs: {
-          description: '123',
-          category: 'Possible Errors',
-          recommended: true
-        }
+        hasSuggestions: true,
+        fixable: true,
       },
       create(context) {
+        // let sortedNodes = []
+        // const sortGroups = [/^@\w/, /^\/w/, /^\.\.\//, /^\./]
+        // const sourceCode = context.getSourceCode()
+        // console.log(sourceCode.tokensAndComments.lines);
         return {
-          // логика правила
-        }
+          ImportDeclaration(node) {
+            console.log(node.source.value);
+            // node = {CallExpression}
+            // let value = node.source.value
+            // var callee = node.callee;
+            // callee.object.name === 'sounds'
+            // callee.property.name === 'get'
+          },
+        };
       },
-}
+    }
+  }
+};

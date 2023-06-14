@@ -10,8 +10,19 @@ const ruleTester = new RuleTester({
   })
 
   ruleTester.run('fixed', rule, {
-    valid: [  {
-      code: ''
+    valid: [   {
+      code: 
+        "import fs from 'fs' \n" +
+        "import path from 'path' \n" + 
+
+        "import _ from 'lodash' \n" 
+    },
+    {
+      code: 
+        "import fs from 'fs' \n"+
+        "import _ from 'lodash' \n"+
+        "import path from 'path' \n"
+      
     }
    ], 
     invalid: []

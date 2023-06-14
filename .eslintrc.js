@@ -9,5 +9,6 @@ module.exports = {
     },
     "plugins": ["fixed"],
     "rules": {
+        "fixed/checkImports" : 1
     }
 }
